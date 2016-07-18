@@ -1,3 +1,5 @@
+require('hutil')
+
 function getQuote()
 	return "Try not. Do."
 end
@@ -21,9 +23,7 @@ function main()
 	elseif op == 3 then	
 		printer.print(vix.quote)
 	elseif op == 4 then
-		printer.print(vix.name)
-		printer.print(vix.age)
-		printer.print(vix.quote)
+		hutil.fPrintTable(vix)
 	else
 		return
 	end
